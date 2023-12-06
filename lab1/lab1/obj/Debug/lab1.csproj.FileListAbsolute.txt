@@ -1,0 +1,7 @@
+S:\_ОБЩАЯ\8И11\Adaev nikitos\C#\lab1\lab1\bin\Debug\lab1.exe.config
+S:\_ОБЩАЯ\8И11\Adaev nikitos\C#\lab1\lab1\bin\Debug\lab1.exe
+S:\_ОБЩАЯ\8И11\Adaev nikitos\C#\lab1\lab1\bin\Debug\lab1.pdb
+S:\_ОБЩАЯ\8И11\Adaev nikitos\C#\lab1\lab1\obj\Debug\lab1.csproj.AssemblyReference.cache
+S:\_ОБЩАЯ\8И11\Adaev nikitos\C#\lab1\lab1\obj\Debug\lab1.csproj.CoreCompileInputs.cache
+S:\_ОБЩАЯ\8И11\Adaev nikitos\C#\lab1\lab1\obj\Debug\lab1.exe
+S:\_ОБЩАЯ\8И11\Adaev nikitos\C#\lab1\lab1\obj\Debug\lab1.pdb
