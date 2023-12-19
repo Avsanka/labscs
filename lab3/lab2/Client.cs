@@ -7,6 +7,26 @@ namespace lab2
     class Client : Person, ICloneable
     {
 
+        public delegate void ClientHandler(string message);
+        public event ClientHandler? Notify;
+        public object Clone()
+        {
+            return new Client(Name, Surname, Patronymic, BirthDate, LoyaltyLevel);
+        }
+
+        public void IncreaseLoyalty()
+        {
+            if (this.loyaltyLevel != 10)
+            {
+                this.LoyaltyLevel++;
+                Notify?.Invoke("Loyaltylevel increased");
+            }
+            else
+            {
+                Notify?.Invoke("Loyalty is maximum");
+            }
+        }
+
         private int loyaltyLevel;
 
         public int LoyaltyLevel
@@ -32,10 +52,6 @@ namespace lab2
             this.LoyaltyLevel = loyalty;
         }
 
-        public object Clone()
-        {
-            return new Client(Name, Surname, Patronymic, BirthDate, LoyaltyLevel);
-        }
 
     }
 }

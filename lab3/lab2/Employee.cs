@@ -12,6 +12,9 @@ namespace lab2
     }
     class Employee : Person, ISalary
     {
+        public delegate void EmployeeHandler(string message);
+        public event EmployeeHandler? Notify;
+
         private int salary;
         public int Salary { get { return salary; } set { salary = value; } }
 
@@ -21,11 +24,13 @@ namespace lab2
         public void increaseSalary(int num)
         {
             salary += num;
+            Notify?.Invoke("Salary changed. New salary is: " + salary);
         }
 
         public void decreaseSalary(int num)
         {
             salary -= num;
+            Notify?.Invoke("Salary changed. New salary is: " + salary);
         }
     }
 

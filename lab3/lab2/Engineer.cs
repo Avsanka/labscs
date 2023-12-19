@@ -11,6 +11,10 @@ namespace lab2
     }
     class Engineer : Employee, IEngClassable
     {
+        public delegate void EngineerHandler(string message);
+        public event EngineerHandler? Notify;
+
+
         private int engineerClass;
 
         public int EngineerClass { get { return engineerClass; } 
@@ -36,7 +40,13 @@ namespace lab2
 
         public void changeClass(int newClass)
         {
-            EngineerClass = newClass;
+            if (newClass > 0 && newClass < 4)
+            {
+                EngineerClass = newClass;
+                Notify?.Invoke("Class changed");
+            }
+            else
+                Notify.Invoke("Class has to be between 1 and 3");
         }
     }
 }
